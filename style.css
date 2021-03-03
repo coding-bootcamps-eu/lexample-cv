@@ -24,6 +24,10 @@ body {
   margin: 0;
 }
 
+*::selection {
+  background-color: plum;
+}
+
 /**************************************************************/
 /* Specific Stylings */
 
@@ -31,6 +35,10 @@ body {
   padding: 48px 16px;
   text-align: center;
   background-color: #eee;
+}
+
+.profession::after {
+  content: "🕺";
 }
 
 .nav-link {

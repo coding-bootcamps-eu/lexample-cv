@@ -12,6 +12,18 @@ html {
   font-size: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -66,6 +78,22 @@ body {
   color: black;
 }
 
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
 .nav-link {
   padding: 0.25rem 0.5rem;
   color: black;
@@ -93,6 +121,12 @@ body {
 
 .main > * + * {
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
 }
 
 .main > * {

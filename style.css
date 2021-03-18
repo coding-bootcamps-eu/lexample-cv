@@ -34,11 +34,19 @@ h6 {
 }
 
 body {
+  --background-color: snow;
+  --text-color: black;
+  --accent-color: plum;
+  --accent-text-color: black;
+  --nav-link-active-bg-color: violet;
+
   margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 *::selection {
-  background-color: plum;
+  background-color: var(--accent-color);
 }
 
 a,
@@ -46,7 +54,7 @@ a:link,
 a:hover,
 a:visited,
 a:active {
-  color: black;
+  color: var(--text-color);
 }
 
 /**************************************************************/
@@ -56,8 +64,13 @@ a:active {
   padding: 3rem 1rem;
   padding-top: 4.5rem;
   text-align: center;
-  background-image: linear-gradient(235deg, snow, plum);
+  background-image: linear-gradient(
+    235deg,
+    var(--background-color),
+    var(--accent-color)
+  );
   position: relative;
+  color: var(--accent-text-color);
 }
 
 .heading-group {
@@ -82,8 +95,7 @@ a:active {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: plum;
-  color: black;
+  background: var(--accent-color);
 }
 
 @media screen and (min-width: 992px) {
@@ -117,15 +129,21 @@ a:active {
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  color: black;
+  color: var(--accent-text-color);
 }
 
 .nav-link:hover {
-  background-color: plum;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .nav-link:active {
-  background-color: violet;
+  background-color: var(--nav-link-active-bg-color);
+  color: var(--accent-text-color);
+}
+
+.nav-link:visited {
+  color: var(--accent-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -151,7 +169,7 @@ a:active {
 }
 
 .main > * {
-  border-top: 0.125rem solid plum;
+  border-top: 0.125rem solid var(--accent-color);
   padding: 0 1rem;
 }
 
@@ -180,7 +198,8 @@ a:active {
 
 .footer {
   margin-top: 3rem;
-  background-color: plum;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
   padding: 2rem;
 }
 
@@ -189,6 +208,10 @@ a:active {
   margin: 0;
 }
 
-.footer-link {
-  color: black;
+.footer-link,
+.footer-link:link,
+.footer-link:hover,
+.footer-link:active,
+.footer-link:visited {
+  color: var(--accent-text-color);
 }
